@@ -1,5 +1,7 @@
 class CoursesController < ApplicationController
   def index
+    courses = Course.includes(:tutors)
+    render json: courses, each_serializer: CourseSerializer, status: :ok
   end
 
   def create
