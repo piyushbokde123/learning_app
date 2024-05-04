@@ -3,6 +3,7 @@ class Course < ApplicationRecord
 	validates :title, :description, :duration, :price, presence: true
 	validates :tutors, presence: true
 	validate :unique_tutor_emails
+	
 	enum level: { Beginner: 0, Intermediate: 1, Advanced: 2 }
 	accepts_nested_attributes_for :tutors
   
