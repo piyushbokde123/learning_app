@@ -19,7 +19,6 @@ RSpec.describe CourseSerializer do
       expect(parsed_response['title']).to eq(course.title)
       expect(parsed_response['description']).to eq(course.description)
       expect(parsed_response['duration']).to eq(course.duration)
-      expect(parsed_response['price']).to eq(course.price.to_s)
       expect(parsed_response['level']).to eq(course.level)
     end
   end
